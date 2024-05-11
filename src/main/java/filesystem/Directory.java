@@ -36,6 +36,7 @@ public class Directory implements FileSystem {
     public boolean deleteFile(String fileNameToBeDeleted) {
         for (FileSystem file : fileSystemList) {
             if (file instanceof File && file.getName().equals(fileNameToBeDeleted)) {
+                file.delete();
                 fileSystemList.remove(file);
                 return true;
             } else if (file instanceof Directory) {
