@@ -39,6 +39,11 @@ public class Directory implements FileSystem {
                 fileSystemList.remove(file);
                 return true;
             } else if (file instanceof Directory) {
+                if(file.getName().equals(fileNameToBeDeleted)){
+                    file.delete();
+                    fileSystemList.remove(file);
+                    return true;
+                }
                 if (((Directory) file).deleteFile(fileNameToBeDeleted)) {
                     return true;
                 }

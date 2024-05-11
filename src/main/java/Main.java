@@ -79,6 +79,10 @@ public class Main {
         System.out.println("\nDeleting 'Most Wanted' file:");
         fileSystemController.deleteFile("Most Wanted");
 
+        //Deleting Directory
+        System.out.println("\nDeleting 'Comedy Movies' directory:");
+        fileSystemController.deleteFile("Comedy Movies");
+
         //Listing all files
         fileSystemController.listCurrentDirectory();
     }
